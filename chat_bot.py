@@ -136,7 +136,7 @@ def check_pattern(dis_list,inp):
     else:
         return 0,[]
 def sec_predict(symptoms_exp):
-    df = pd.read_csv('Data/Training.csv')
+    df = pd.read_csv('Training.csv')
     X = df.iloc[:, :-1]
     y = df['prognosis']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=20)
@@ -266,4 +266,5 @@ getprecautionDict()
 getInfo()
 tree_to_code(clf,cols)
 print("----------------------------------------------------------------------------------------")
+
 
